@@ -4,7 +4,7 @@ angular.module('app').directive('rtaLineChartWidget', ['psWebMetricsService',
     function (psWebMetricsService) {
         return {
             // inherited scope from psWidgetBody
-            templateUrl: '/app/widgets/rtaLineChartTemplate.html',
+            templateUrl: 'app/widgets/rtaLineChartTemplate.html',
             link: function (scope, el, attrs) {
 
                 scope.metric = scope.item.widgetSettings.metric;

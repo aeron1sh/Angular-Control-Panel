@@ -4,7 +4,7 @@ angular.module('app').directive('rtaGaugeWidget', ['psWebMetricsService',
     function (psWebMetricsService) {
         return {
             // inherited scope from psWidgetBody
-            templateUrl: '/app/widgets/rtaGaugeTemplate.html',
+            templateUrl: 'app/widgets/rtaGaugeTemplate.html',
             link: function (scope, el, attrs) {
 
                 scope.metric = scope.item.widgetSettings.metric;

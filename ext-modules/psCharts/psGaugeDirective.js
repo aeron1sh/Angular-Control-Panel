@@ -5,7 +5,7 @@ angular.module('psCharts').directive('psGauge', [
     function (psWebMetricsService) {
         return {
 
-            templateUrl: '/ext-modules/psCharts/psGaugeTemplate.html',
+            templateUrl: 'ext-modules/psCharts/psGaugeTemplate.html',
             link: function (scope, el, attrs) {
 
                 scope.options = {
