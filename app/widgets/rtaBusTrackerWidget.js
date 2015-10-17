@@ -4,7 +4,7 @@ angular.module('app').directive('rtaBusTrackerWidget', [
     function () {
         return {
             // inherited scope from psWidgetBody
-            templateUrl: '/app/widgets/rtaBusTrackerTemplate.html',
+            templateUrl: 'app/widgets/rtaBusTrackerTemplate.html',
             link: function (scope, el, attrs) {
 
                 scope.lat = scope.item.widgetSettings.lat;
