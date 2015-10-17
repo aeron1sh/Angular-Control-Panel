@@ -1,0 +1,94 @@
+﻿
+body {
+    background-color: white;
+    font-family: "Open Sans", Arial, sans-serif;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.sign-in-form {
+    padding: 80px;
+}
+
+
+ps-security-monitor {
+    font-size: 16px;
+}
+ul {
+    list-style: none;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+ps-security-monitor h3, ps-security-monitor select {
+    margin: 20px;
+}
+
+.app-security-list {
+    width: 380px;
+    height: 350px;
+    overflow-y: scroll;
+    margin-left: 20px;
+    border: 1px solid #999;
+    font-size: 16px;
+}
+
+.app-message {
+    min-width: 150px;
+    background-color: red;
+    color: white;
+    display: inline-block;
+    margin: 5px;
+    padding: 3px;
+}
+
+.app-name {
+    display: inline-block;
+}
+
+.app-datetime {
+    font-size: 10px;
+}
+
+.non-error {
+    background-color: green;
+}
+
+ps-bus-tracker {
+    display: inline-block;
+    min-width: 100%;
+    min-height: 100%;
+    background-color: red;
+}
+
+ps-tweet-filter {
+    font-size: 24px;
+}
+ps-tweet-filter > div,
+ps-tweet-filter > h3,
+ps-tweet-filter > h5 {
+    margin: 10px;
+}
+.ps-tweet-list {
+    width: 380px;
+    height: 320px;
+    overflow-y: scroll;
+    margin-top: 20px;
+    border: 1px solid #999;
+    font-size: 14px;
+}
+
+.ps-twitter-image {
+    width: 32px;
+    height: 32px;
+}
+
+.ps-twitter-user {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 16px;
+}
