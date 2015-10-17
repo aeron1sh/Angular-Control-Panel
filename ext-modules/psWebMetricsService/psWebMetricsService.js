@@ -4,11 +4,13 @@ angular.module('psWebMetricsService', []).factory('psWebMetricsService', [
     '$rootScope',
     function ($rootScope) {
 
-        // Declare a proxy to reference the hub.
-        $.connection.hub.url = 'http://localhost:65470/signalr';
-        var hub = $.connection.metricHub;
+        var bandwidthPct = 20.0;
+        var cpuPct = 10.0;
+        var salesAmt = 1000.0;
+        var alphaSalesAmt = 700.0;
+        var betaSalesAmt = 300.0;
 
-        hub.client.broadcastMessage = function (time, bandwidthPct, cpuPct,
+        var broadcastMessage = function (time, bandwidthPct, cpuPct,
                                                     salesAmt, alphaSalesAmt, betaSalesAmt) {
             
             $rootScope.$broadcast('psWebMetricsService-received-data-event',
@@ -21,20 +23,6 @@ angular.module('psWebMetricsService', []).factory('psWebMetricsService', [
                     'betaSalesAmt': betaSalesAmt,
                 });
         };
-        
-        $.connection.hub.start()
-            .done()
-            .fail(function (data) {
-                alert(data);
-            }
-        );
-
-        $.connection.hub.disconnected(function () {
-            console.log('disconnected signalr');
-            $rootScope.$broadcast('psWebMetricsService-disconnected-event',
-                {
-                });
-        });
 
         var getTitleForMetric = function (metric) {
             switch (metric) {
