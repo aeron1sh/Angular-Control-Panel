@@ -4,7 +4,7 @@ angular.module('app').directive('rtaCandlestickWidget', ['psWebMetricsService',
     function (psWebMetricsService) {
         return {
             // inherited scope from psWidgetBody
-            templateUrl: '/app/widgets/rtaCandlestickTemplate.html',
+            templateUrl: 'app/widgets/rtaCandlestickTemplate.html',
             link: function (scope, el, attrs) {
 
                 scope.metric = scope.item.widgetSettings.metric;
