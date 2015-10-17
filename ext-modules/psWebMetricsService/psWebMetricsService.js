@@ -23,6 +23,34 @@ angular.module('psWebMetricsService', []).factory('psWebMetricsService', [
                     'betaSalesAmt': betaSalesAmt,
                 });
         };
+        
+        setInterval(function () {
+
+        broadcastMessage(new Date(), bandwidthPct, cpuPct,
+                        salesAmt, alphaSalesAmt, betaSalesAmt);
+
+        // update values
+        var r = Math.random();
+        bandwidthPct += 15 * r - 7.5;
+        if (bandwidthPct > 100) bandwidthPct = 100;
+        if (bandwidthPct < 0) bandwidthPct = 0;
+
+        r = Math.random();
+        cpuPct += 15 * r - 7.5;
+        if (cpuPct > 100) cpuPct = 100;
+        if (cpuPct < 0) cpuPct = 0;
+
+        r = Math.random();
+        alphaSalesAmt += r * 10;
+        if (alphaSalesAmt < 0) alphaSalesAmt = 0;
+
+        r = Math.random();
+        betaSalesAmt += r * 10;
+        if (betaSalesAmt < 0) betaSalesAmt = 0;
+
+        salesAmt = alphaSalesAmt + betaSalesAmt;
+
+    }, 100);
 
         var getTitleForMetric = function (metric) {
             switch (metric) {
