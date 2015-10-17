@@ -4,7 +4,7 @@ angular.module('app').directive('rtaSecurityMonitorWidget', ['psSecurityMonitorS
     function (psSecurityMonitorService) {
         return {
             // inherited scope from psWidgetBody
-            templateUrl: '/app/widgets/rtaSecurityMonitorTemplate.html',
+            templateUrl: 'app/widgets/rtaSecurityMonitorTemplate.html',
             link: function (scope, el, attrs) {
 
                 scope.error = false;
